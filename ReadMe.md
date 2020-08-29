@@ -12,10 +12,10 @@
   # Table of Contents
   
   * [About the Project](#about-the-project)
+      * [Usage](#usage)
       * [Live Link](#finished-project)
       * [Project Demo](#project-demo)
       * [Built With](#built-with)
-  * [Usage](#usage)
   * [License](#license)
   * [Contribution Instructions](#contributions)
   * [Test Instructions](#testing)
@@ -26,11 +26,15 @@
   
   <!-- ABOUT THE PROJECT -->
   # About The Project
+
+  ## Usage
+
+  To take notes.
   
   ## Finished Project
   
   <!-- Add deployed link when available -->
-  [Deployed Project](http://www.example.com) 
+  [Deployed Project](https://br3ndan-l8n.github.io/Note-Taker/) 
   
   ## Project Demo
   
@@ -39,11 +43,10 @@
 
   ## Built With
 
-  undefined
-
-  # Usage
-
-  Update Later
+  Node.js
+  * Express
+  * Nodemon
+  HTML/CSS/JS
 
   # License
   
