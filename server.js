@@ -21,6 +21,13 @@ app.use(express.json());
 // ==============
 
 // 
+// ROUTER
+//
+//  routes for our app to direct traffic
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
+// 
 // LISTENER
 //
 // Start server
