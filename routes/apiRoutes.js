@@ -45,11 +45,17 @@ module.exports = function (app) {
             });
         }
         db.push(newNote);
-        console.log(newNote);
         res.json(db);
     });
 
-    // app.delete("/api/notes")
+    //   DELETE a note of a specific ID
+    app.delete("/api/notes:id", function (req, res) {
+        const id = req.params.id;
+        db.forEach(function(note) {
+            note.id === id ? delete note: '';
+        });
+        res.json(db);
+    });
 
     // ---------------------------------------------------------------------------
     // I added this below code so you could clear out the table while working with the functionality.

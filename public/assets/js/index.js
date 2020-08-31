@@ -17,8 +17,9 @@ const getNotes = () => {
 
 // A function for saving a note to the db
 const saveNote = (note) => {
+  console.log('saved note sent to apiRoutes.js');
   return $.ajax({
-    url: "/api/notes",
+    url: "../../../api/notes",
     data: note,
     method: "POST",
   });
@@ -51,6 +52,7 @@ const renderActiveNote = () => {
 
 // Get the note data from the inputs, save it to the db and update the view
 const handleNoteSave = function () {
+  console.log('save note button pressed');
   const newNote = {
     title: $noteTitle.val(),
     text: $noteText.val(),
