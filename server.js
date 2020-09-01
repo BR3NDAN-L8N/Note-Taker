@@ -3,6 +3,8 @@
 //
 var express = require("express");
 const path = require('path');
+
+
 // ==============
 
 // 
@@ -12,7 +14,7 @@ var app = express();
 // Set initial port
 var PORT = process.env.PORT || 8080;
 // ==============
-
+//app.use("/",  require("./routes/htmlRoutes"));
 // 
 //  APP CODE
 // 
@@ -25,7 +27,7 @@ app.use(express.json());
 // .use = used for including middleware
 // __dirname = current directory
 //  public is the name of the folder to make static
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, 'public')));
 // ==============
 
 // 

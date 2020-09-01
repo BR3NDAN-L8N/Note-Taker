@@ -3,6 +3,14 @@
 // DEPENDENCIES
 //
 var path = require("path");
+const { Router } = require("express");
+// var Router =require("express").Router();
+
+// Router.get("/notes", function (req, res){
+//     res.sendFile(path.join(__dirname, "../public/notes.html"));
+// })
+
+// module.exports = router;
 //
 // ROUTING
 //

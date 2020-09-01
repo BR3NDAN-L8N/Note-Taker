@@ -1,3 +1,5 @@
+var fs = require("fs");
+
 // 
 // LOAD DATA
 // 
@@ -32,6 +34,7 @@ module.exports = function (app) {
     // ---------------------------------------------------------------------------
     //  saves user req to db.json
     app.post("/api/notes", function (req, res) {
+        console.log("post")
         //  Create object for new note giving random ID
         const newNote = {
             id: uuid.v4(),
@@ -39,21 +42,32 @@ module.exports = function (app) {
             text: req.body.text
         }
         //  IF user didn't enter a title or text then let them know
-        if (!newNote.title || !newNote.text) {
-            return res.status(400).json({
-                msg: 'You forgot to enter a title or message'
-            });
-        }
+
         db.push(newNote);
+
+        fs.writeFile('./db/db.json', JSON.stringify(db), function (err) {
+
+            if (err) {
+                return console.log(err);
+            }
+
+            console.log("Success!");
+
+        });
         res.json(db);
     });
 
     //   DELETE a note of a specific ID
-    app.delete("/api/notes:id", function (req, res) {
+    app.delete("/api/notes/:id", function (req, res) {
         const id = req.params.id;
-        db.forEach(function(note) {
-            note.id === id ? delete note: '';
+        db.forEach(function (note) {
+            note.id === id ? delete note : '';
         });
+        //you will have to get the array 
+        //find the item (index)
+        //splice
+        //check your api route if it works or console.log db
+        //fs write file
         res.json(db);
     });
 
