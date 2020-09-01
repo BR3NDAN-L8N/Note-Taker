@@ -59,16 +59,25 @@ module.exports = function (app) {
 
     //   DELETE a note of a specific ID
     app.delete("/api/notes/:id", function (req, res) {
+        console.log('delete sent to backend?');
         const id = req.params.id;
-        db.forEach(function (note) {
-            note.id === id ? delete note : '';
+        db.forEach(function (note, index) {
+            note.id === id ? db.splice(index, 1) : '';
+            fs.writeFile('./db/db.json', JSON.stringify(db), function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+                console.log("Success!");
+
+            });
         });
+
+        res.json(db)
         //you will have to get the array 
         //find the item (index)
         //splice
         //check your api route if it works or console.log db
         //fs write file
-        res.json(db);
     });
 
     // ---------------------------------------------------------------------------
