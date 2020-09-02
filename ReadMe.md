@@ -34,7 +34,7 @@
   ## Finished Project
   
   <!-- Add deployed link when available -->
-  [Deployed Project](https://br3ndan-l8n.github.io/Note-Taker/) 
+  [Deployed Project](https://dashboard.heroku.com/apps/enigmatic-earth-48562/settings) 
   
   ## Project Demo
   
@@ -47,6 +47,7 @@
   * Express
   * Nodemon
   HTML/CSS/JS
+  Heroku
 
   # License
   
@@ -83,7 +84,7 @@
   
   <!-- ACKNOWLEDGEMENTS -->
   # Acknowledgements
-  NPM, Nodemon, Google
+  NPM, Nodemon, Google, Heroku, Vivian (tutor).
   
   
 <!-- MARKDOWN LINKS & IMAGES -->
